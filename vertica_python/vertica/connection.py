@@ -16,7 +16,8 @@ from vertica_python.vertica.cursor import Cursor
 from vertica_python.errors import SSLNotSupported
 
 logger = logging.getLogger('vertica')
-
+LOG_FILENAME = 'vertica-python.log'
+logging.basicConfig(filename=LOG_FILENAME,level=logging.DEBUG)
 
 class Connection(object):
     def __init__(self, options=None):
