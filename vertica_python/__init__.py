@@ -1,7 +1,7 @@
 from __future__ import absolute_import
 
 from vertica_python.vertica.connection import Connection
-
+from vertica_python.errors import Error
 
 # Main module for this library.
 
