@@ -20,6 +20,11 @@ setup(
     license="MIT",
     install_requires=['python-dateutil>=1.5', 'pytz'],
     extras_require={'namedparams': ['psycopg2>=2.5.1']},
+    entry_points = {
+        "sqlalchemy.dialects": [
+            "vertica.vertica_python = vertica_python.dialect:VerticaDialect"
+        ]
+    },
     classifiers=[
         "Development Status :: 3 - Alpha",
         "Intended Audience :: Developers",
